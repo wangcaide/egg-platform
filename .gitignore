@@ -1,6 +1,19 @@
-# Project exclude paths
-/egg-platform-auth/egg-platform-auth-serv/target/
-/egg-platform-common/egg-platform-data-lib/target/
-/egg-platform-common/egg-platform-swagger-lib/target/
-/egg-platform-upms/egg-platform-upms-api/target/
-/egg-platform-upms/egg-platform-upms-serv/target/
+.flattened-pom.xml
+# Compiled class file
+*.class
+
+# Log file
+*.log
+
+# Package Files #
+*.jar
+*.war
+*.nar
+*.ear
+*.zip
+*.tar.gz
+*.rar
+
+# idea
+.idea
+*.iml
