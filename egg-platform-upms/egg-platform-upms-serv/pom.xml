@@ -19,7 +19,7 @@
         <!-- egg-platform model -->
         <dependency>
             <groupId>xyz.wangcaide.egg.platform</groupId>
-            <artifactId>egg-platform-data-lib</artifactId>
+            <artifactId>egg-platform-starter-data</artifactId>
             <version>${project.version}</version>
         </dependency>
     </dependencies>
