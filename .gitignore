@@ -1,0 +1,6 @@
+# Project exclude paths
+/egg-platform-auth/egg-platform-auth-serv/target/
+/egg-platform-common/egg-platform-data-lib/target/
+/egg-platform-common/egg-platform-swagger-lib/target/
+/egg-platform-upms/egg-platform-upms-api/target/
+/egg-platform-upms/egg-platform-upms-serv/target/
