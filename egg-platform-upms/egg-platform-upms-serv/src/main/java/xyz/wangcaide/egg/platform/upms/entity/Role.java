@@ -2,32 +2,30 @@ package xyz.wangcaide.egg.platform.upms.entity;
 
 import xyz.wangcaide.egg.platform.data.entity.BaseEntity;
 import lombok.Data;
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
+import com.baomidou.mybatisplus.annotation.IdType;
+import com.baomidou.mybatisplus.annotation.TableName;
+import com.baomidou.mybatisplus.annotation.TableId;
+import com.baomidou.mybatisplus.annotation.TableField;
 
 /**
  * Entity Role 账户角色信息
  * @author : wangcaide@outlook.com
- * @date : 2022-8-31
+ * @date : 2022-10-13
  */
-@Entity(name="UPMS_ROLE")
+@TableName("UPMS_ROLE")
 @Data
 public class Role extends BaseEntity {
     /** ID */
-    @Id
-    @GeneratedValue
-    @Column(name = "ID")
+    @TableId(value = "ROLE_ID",type = IdType.AUTO)
     private Long roleId ;
     /** 角色码 */
-    @Column(name = "角色码")
+    @TableField("ROLE_CODE")
     private String roleCode ;
     /** 角色名称 */
-    @Column(name = "角色名称")
+    @TableField("ROLE_NAME")
     private String roleName ;
     /** 状态 */
-    @Column(name = "状态")
+    @TableField("STATUS")
     private String status ;
 
 }

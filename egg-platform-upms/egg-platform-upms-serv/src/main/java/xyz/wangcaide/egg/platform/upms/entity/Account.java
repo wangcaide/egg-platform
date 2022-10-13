@@ -2,35 +2,33 @@ package xyz.wangcaide.egg.platform.upms.entity;
 
 import xyz.wangcaide.egg.platform.data.entity.BaseEntity;
 import lombok.Data;
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
+import com.baomidou.mybatisplus.annotation.IdType;
+import com.baomidou.mybatisplus.annotation.TableName;
+import com.baomidou.mybatisplus.annotation.TableId;
+import com.baomidou.mybatisplus.annotation.TableField;
 
 /**
  * Entity Account 账户
  * @author : wangcaide@outlook.com
- * @date : 2022-8-31
+ * @date : 2022-10-13
  */
-@Entity(name="UPMS_ACCOUNT")
+@TableName("UPMS_ACCOUNT")
 @Data
 public class Account extends BaseEntity {
     /** 账户ID */
-    @Id
-    @GeneratedValue
-    @Column(name = "账户ID")
+    @TableId(value = "ACCOUNT_ID",type = IdType.AUTO)
     private Long accountId ;
     /** 账户类型，个人/.. */
-    @Column(name = "账户类型，个人/..")
+    @TableField("ACCOUNT_TYPE")
     private String accountType ;
     /** 用户名(登陆名) */
-    @Column(name = "用户名(登陆名)")
+    @TableField("USERNAME")
     private String username ;
     /** 密码 */
-    @Column(name = "密码")
+    @TableField("PASSWORD")
     private String password ;
     /** 状态 */
-    @Column(name = "状态")
+    @TableField("STATUS")
     private String status ;
 
 }

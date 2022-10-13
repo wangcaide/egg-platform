@@ -15,7 +15,12 @@
     <dependencies>
         <dependency>
             <groupId>xyz.wangcaide.egg.platform</groupId>
-            <artifactId>egg-platform-starter-swagger</artifactId>
+            <artifactId>egg-platform-starter-api</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>xyz.wangcaide.egg.platform</groupId>
+            <artifactId>egg-platform-core-lib</artifactId>
             <version>${project.version}</version>
         </dependency>
     </dependencies>

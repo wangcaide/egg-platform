@@ -14,7 +14,7 @@
 
     <modules>
         <module>egg-platform-core-lib</module>
-        <module>egg-platform-starter-swagger</module>
+        <module>egg-platform-starter-api</module>
         <module>egg-platform-starter-data</module>
     </modules>
 

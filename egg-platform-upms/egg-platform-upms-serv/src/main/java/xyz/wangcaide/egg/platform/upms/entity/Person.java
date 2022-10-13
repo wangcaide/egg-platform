@@ -2,38 +2,36 @@ package xyz.wangcaide.egg.platform.upms.entity;
 
 import xyz.wangcaide.egg.platform.data.entity.BaseEntity;
 import lombok.Data;
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
+import com.baomidou.mybatisplus.annotation.IdType;
+import com.baomidou.mybatisplus.annotation.TableName;
+import com.baomidou.mybatisplus.annotation.TableId;
+import com.baomidou.mybatisplus.annotation.TableField;
 
 /**
  * Entity Person 个人信息
  * @author : wangcaide@outlook.com
- * @date : 2022-8-31
+ * @date : 2022-10-13
  */
-@Entity(name="UPMS_PERSON")
+@TableName("UPMS_PERSON")
 @Data
 public class Person extends BaseEntity {
     /** ID */
-    @Id
-    @GeneratedValue
-    @Column(name = "ID")
+    @TableId(value = "PERSON_ID",type = IdType.AUTO)
     private Long personId ;
     /** 名字 */
-    @Column(name = "名字")
+    @TableField("FIRST_NAME")
     private String firstName ;
     /** 姓 */
-    @Column(name = "姓")
+    @TableField("LAST_NAME")
     private String lastName ;
     /** 证件类型 */
-    @Column(name = "证件类型")
+    @TableField("ID_TYPE")
     private String idType ;
     /** 证件号 */
-    @Column(name = "证件号")
+    @TableField("ID_NUMBER")
     private String idNumber ;
     /** 状态 */
-    @Column(name = "状态")
+    @TableField("STATUS")
     private String status ;
 
 }

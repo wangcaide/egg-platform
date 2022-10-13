@@ -2,45 +2,44 @@ package xyz.wangcaide.egg.platform.upms.entity;
 
 import xyz.wangcaide.egg.platform.data.entity.BaseEntity;
 import lombok.Data;
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
+import com.baomidou.mybatisplus.annotation.IdType;
+import com.baomidou.mybatisplus.annotation.TableName;
+import com.baomidou.mybatisplus.annotation.TableId;
+import com.baomidou.mybatisplus.annotation.TableField;
+
 import java.util.Date;
 
 /**
  * Entity Organization 组织
  * @author : wangcaide@outlook.com
- * @date : 2022-8-31
+ * @date : 2022-10-13
  */
-@Entity(name="UPMS_ORGANIZATION")
+@TableName("UPMS_ORGANIZATION")
 @Data
 public class Organization extends BaseEntity {
     /** ID */
-    @Id
-    @GeneratedValue
-    @Column(name = "ID")
+    @TableId(value = "ORGANIZATION_ID",type = IdType.AUTO)
     private Long organizationId ;
     /** 上级机构ID */
-    @Column(name = "上级机构ID")
+    @TableField("PARENT_ORGANIZATION_ID")
     private Long parentOrganizationId ;
     /** 机构码 */
-    @Column(name = "机构码")
+    @TableField("ORGANIZATION_CODE")
     private String organizationCode ;
     /** 机构类型，公司/部门 */
-    @Column(name = "机构类型，公司/部门")
+    @TableField("ORGANIZATION_TYPE")
     private String organizationType ;
     /** 机构名称 */
-    @Column(name = "机构名称")
+    @TableField("ORGANIZATION_NAME")
     private String organizationName ;
     /** 机构描述 */
-    @Column(name = "机构描述")
+    @TableField("ORGANIZATION_DESCRIPTION")
     private String organizationDescription ;
     /** 成立时间 */
-    @Column(name = "成立时间")
+    @TableField("ESTABLISHMENT_DATE")
     private Date establishmentDate ;
     /** 状态 */
-    @Column(name = "状态")
+    @TableField("STATUS")
     private String status ;
 
 }

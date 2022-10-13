@@ -1,26 +1,35 @@
 package xyz.wangcaide.egg.platform.data.entity;
 
-import javax.persistence.Column;
+import lombok.Data;
+import org.springframework.beans.BeanUtils;
+
+import com.baomidou.mybatisplus.annotation.TableField;
 import java.io.Serializable;
 import java.util.Date;
 
+@Data
 public class BaseEntity implements Serializable {
     /** 租户号 */
-    @Column(name = "TENANT_ID")
+    @TableField("TENANT_ID")
     private String tenantId ;
     /** 乐观锁 */
-    @Column(name = "REVISION")
+    @TableField("REVISION")
     private String revision ;
     /** 创建人 */
-    @Column(name = "CREATED_BY")
+    @TableField("CREATED_BY")
     private String createdBy ;
     /** 创建时间 */
-    @Column(name = "CREATED_TIME")
+    @TableField("CREATED_TIME")
     private Date createdTime ;
     /** 更新人 */
-    @Column(name = "UPDATED_BY")
+    @TableField("UPDATED_BY")
     private String updatedBy ;
     /** 更新时间 */
-    @Column(name = "UPDATED_TIME")
+    @TableField("UPDATED_TIME")
     private Date updatedTime ;
+
+    public <T> T convertVO(T emptyVO) {
+        BeanUtils.copyProperties(this, emptyVO);
+        return emptyVO;
+    }
 }

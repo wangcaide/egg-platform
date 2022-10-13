@@ -16,10 +16,20 @@
     </properties>
 
     <dependencies>
+        <!-- spring boot starter -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-webflux</artifactId>
+        </dependency>
         <!-- egg-platform model -->
         <dependency>
             <groupId>xyz.wangcaide.egg.platform</groupId>
             <artifactId>egg-platform-starter-data</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>xyz.wangcaide.egg.platform</groupId>
+            <artifactId>egg-platform-upms-api</artifactId>
             <version>${project.version}</version>
         </dependency>
     </dependencies>
